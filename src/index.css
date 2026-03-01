@@ -1,5 +1,42 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand: var(--brand-primary);
+  --color-purple: var(--purple-primary);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --color-background: var(--background);
+  --color-image-accent: var(--image-accent);
+  --color-surface: var(--surface);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+}
+
+:root {
+  --purple-primary: #a729f5;
+  --success: #26d782;
+  --danger: #ee5454;
+  --background: #f2f6fe;
+  --image-accent: #edf1f9;
+  --surface: #ffffff;
+  --text-main: #313e51;
+  --text-muted: #626c7f;
+  color-scheme: light;
+}
+
+.dark {
+  --background: #364963;
+  --image-accent: #364459;
+  --surface: #3b4d66;
+  --text-main: #ffffff;
+  --text-muted: #abc1e1;
+  color-scheme: dark;
+}
+
+html,
+body {
+  @apply bg-background text-text-main transition-colors duration-200;
+}
+
+#root {
+  @apply min-h-[100dvh] bg-background text-text-main transition-colors duration-300;
 }
